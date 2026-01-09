@@ -13,7 +13,12 @@ local Mouse = LocalPlayer:GetMouse()
 
 -- Convert the "Z" string to a real Roblox KeyCode
 local function GetKeyCode(key)
-    return Enum.KeyCode[key]
+    local code = Enum.KeyCode[key]
+    if not code then
+        warn("Invalid KeyCode: "..tostring(key))
+        return Enum.KeyCode.Unknown
+    end
+    return code
 end
 
 local SilentCfg = Config['Silent Aim']
