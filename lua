@@ -1,3 +1,37 @@
+shared.Linear = {
+    ['General'] = {
+        ['Team Check'] = false,
+        ['Aim Part'] = 'HumanoidRootPart', -- Options: HumanoidRootPart, Head, UpperTorso
+    },
+    
+    ['Silent Aim'] = {
+        ['Enabled'] = false,
+        ['Transparency'] = 0.5,
+        ['FOV'] = {
+            ['Visible'] = true,
+            ['X'] = 12, -- Replaced Vector2
+            ['Y'] = 12,
+            ['Color'] = Color3.fromRGB(255, 255, 255)
+        }
+    },
+    
+    ['Trigger Bot'] = {
+        ['Enabled'] = false,
+        ['Transparency'] = 0.5,
+        ['Delay'] = 0.05,
+        ['Activation'] = {
+            ['Mode'] = 'Hold', -- Options: Hold, Toggle
+            ['Keybind'] = 'Z'  -- Replaced Enum.KeyCode.Z
+        },
+        ['FOV'] = {
+            ['Visible'] = true,
+            ['X'] = 15, -- Replaced Vector2
+            ['Y'] = 15,
+            ['Color'] = Color3.fromRGB(255, 0, 0)
+        }
+    }
+}
+
 repeat task.wait() until game:IsLoaded()
 
 local Config = shared.Linear
